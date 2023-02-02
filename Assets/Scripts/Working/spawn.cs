@@ -15,9 +15,9 @@ public class spawn : MonoBehaviour
     IEnumerator ObjectSpawn() {
 
         foreach (GameObject prefab in objectPrefab) {
-            for(int j=0; j<5; j++) {
+            for(int j=0; j<10; j++) {
                 Vector2 pos = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-                var collisions = Physics.OverlapSphere(pos, 3);
+                var collisions = Physics.OverlapSphere(pos, 10f);
                 while (collisions.Length > 0) {
                     pos = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
                     collisions = Physics.OverlapSphere(pos, 3);

@@ -5,10 +5,12 @@ using UnityEngine;
 public class Chase : MonoBehaviour
 {
     public string preyTag;
+    [Range(0f, 1f)]
     public float speed = 1;
+    [Range(1f, 50f)]
+    public float strength;
 
     private GameObject prey;
-    private float strength = 2f;
     private float mean;
     private GameObject[] allEnemies;
     private GameObject[] allAllies;
@@ -18,12 +20,12 @@ public class Chase : MonoBehaviour
 
         allEnemies = GameObject.FindGameObjectsWithTag(preyTag);
         allAllies = GameObject.FindGameObjectsWithTag(this.tag);
-        // strength *= allAllies.Length;
         prey = Closest();
         if (prey.transform.position == transform.position) {
             transform.position = startingPosition + Random.insideUnitCircle * 0.04f;
         } else {
-            transform.position = Vector2.MoveTowards(transform.position, prey.transform.position, mean * speed * Time.deltaTime / strength) + Random.insideUnitCircle * 0.04f;
+            transform.position = Vector2.MoveTowards(transform.position, prey.transform.position, speed * Time.deltaTime) + Random.insideUnitCircle * 0.04f;
+            // transform.position = Vector2.MoveTowards(transform.position, prey.transform.position, speed * Time.deltaTime);
         }
     }
 

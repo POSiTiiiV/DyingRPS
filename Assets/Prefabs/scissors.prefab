@@ -123,9 +123,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06, y: 0.06}
+  m_Offset: {x: -0.06, y: 0.21}
   serializedVersion: 2
-  m_Radius: 2.56
+  m_Radius: 2.84
 --- !u!114 &4848423078946709890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   preyTag: paper
   speed: 1
+  strength: 9.3
 --- !u!114 &3271741375638024620
 MonoBehaviour:
   m_ObjectHideFlags: 0

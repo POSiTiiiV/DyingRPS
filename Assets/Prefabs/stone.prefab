@@ -125,7 +125,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.25, y: -0.06}
   serializedVersion: 2
-  m_Radius: 2.01
+  m_Radius: 2.2
 --- !u!114 &795085845267177503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   preyTag: scissors
   speed: 1
+  strength: 9.3
 --- !u!114 &6014041801748613660
 MonoBehaviour:
   m_ObjectHideFlags: 0

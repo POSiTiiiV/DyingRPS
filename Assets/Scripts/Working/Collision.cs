@@ -8,9 +8,9 @@ public class Collision : MonoBehaviour
     public string preyTag;
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == preyTag && GameObject.FindGameObjectsWithTag(gameObject.tag).Length <= 15) {
-            GameObject stone = Instantiate(gameObject, collision.transform.position, Quaternion.identity);
+        if (collision.gameObject.tag == preyTag) {
             sound.Play();
+            GameObject stone = Instantiate(gameObject, collision.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
         }
     }

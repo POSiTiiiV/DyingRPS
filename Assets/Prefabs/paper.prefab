@@ -134,7 +134,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.2619705, y: 4.79434}
+  m_Size: {x: 4.76, y: 5.17}
   m_EdgeRadius: 0
 --- !u!114 &5344709972253687048
 MonoBehaviour:
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   preyTag: stone
   speed: 1
+  strength: 9.3
 --- !u!114 &6023321754631748480
 MonoBehaviour:
   m_ObjectHideFlags: 0
