@@ -17,10 +17,11 @@ public class spawn : MonoBehaviour
         foreach (GameObject prefab in objectPrefab) {
             for(int j=0; j<10; j++) {
                 Vector2 pos = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-                var collisions = Physics.OverlapSphere(pos, 10f);
-                while (collisions.Length > 0) {
+                Collider2D collision = Physics2D.OverlapCircle(pos, 1f);
+                // if (collisions == null) Debug.Log(collisions);
+                while (collision != null) {
                     pos = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-                    collisions = Physics.OverlapSphere(pos, 3);
+                    collision = Physics2D.OverlapCircle(pos, 1f);
                 }
                 GameObject gobject = Instantiate(prefab, pos, Quaternion.identity);
             }
