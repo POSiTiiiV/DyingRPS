@@ -11,7 +11,7 @@ public class Delay : MonoBehaviour {
     }
 
     IEnumerator Sleep() {
-        yield return new WaitForSecondsRealtime(5);
+        yield return new WaitForSecondsRealtime(3);
         Countdown.SetActive(false);
         Time.timeScale = 1;
     }

@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1091424820542814378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16, y: 0.16, z: 1}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5521587190960254038}
@@ -75,10 +75,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1730370833
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7f30ac53613dee34aba2f45855fecf71, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0c4c400ee4863749a04a2f4e28534ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,9 +123,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.25, y: -0.06}
+  m_Offset: {x: -0.58, y: 0.12}
   serializedVersion: 2
-  m_Radius: 2.2
+  m_Radius: 4.63
 --- !u!114 &795085845267177503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,8 +139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   preyTag: scissors
+  enemyTag: paper
   speed: 1
-  strength: 9.3
 --- !u!114 &6014041801748613660
 MonoBehaviour:
   m_ObjectHideFlags: 0

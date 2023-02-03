@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1506853606383524985}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.6070194, y: -2.4802089, z: -0.0044908123}
-  m_LocalScale: {x: 0.16, y: 0.16, z: 1}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1269097542281781281}
@@ -75,10 +75,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1730370833
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4da855481b7adaf48a56b7bbbc8919a7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0cb73e0afc34d574f9953d855b4c1e63, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,18 +123,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.018091202, y: 0.018091202}
+  m_Offset: {x: -0.47, y: -0.32}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.66, y: 5.12}
+    oldSize: {x: 10.8, y: 15.17}
     newSize: {x: 4.66, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.76, y: 5.17}
+  m_Size: {x: 6.7, y: 12.12}
   m_EdgeRadius: 0
 --- !u!114 &5344709972253687048
 MonoBehaviour:
@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   preyTag: stone
+  enemyTag: scissors
   speed: 1
-  strength: 9.3
 --- !u!114 &6023321754631748480
 MonoBehaviour:
   m_ObjectHideFlags: 0

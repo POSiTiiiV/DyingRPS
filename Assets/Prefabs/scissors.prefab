@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7546723383885038733}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.687618, y: -4.1424646, z: -0.0044908123}
-  m_LocalScale: {x: 0.16, y: 0.16, z: 1}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1277008753476062413}
@@ -75,10 +75,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1730370833
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 44c370d72f0cddc45b8c627b7aa3ebba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 881779d1d791ca341becaaef2ad21bce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,9 +123,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06, y: 0.21}
+  m_Offset: {x: -0.06, y: -0.25}
   serializedVersion: 2
-  m_Radius: 2.84
+  m_Radius: 5.18
 --- !u!114 &4848423078946709890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,8 +139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   preyTag: paper
+  enemyTag: stone
   speed: 1
-  strength: 9.3
 --- !u!114 &3271741375638024620
 MonoBehaviour:
   m_ObjectHideFlags: 0
