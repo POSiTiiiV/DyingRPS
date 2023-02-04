@@ -141,6 +141,7 @@ MonoBehaviour:
   preyTag: scissors
   enemyTag: paper
   speed: 1
+  atSpawn: {fileID: 0}
 --- !u!114 &6014041801748613660
 MonoBehaviour:
   m_ObjectHideFlags: 0

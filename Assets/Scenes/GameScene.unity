@@ -376,7 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8c005319662784a8dfbae16547146a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefab:
+  objectPrefabs:
   - {fileID: 1506853606383524985, guid: 60f4d97b7a65d544cbcb91cd188b8ac8, type: 3}
   - {fileID: 7546723383885038733, guid: 67c5ecff9dbe28347ae8e1f252a50a0f, type: 3}
   - {fileID: 1091424820542814378, guid: 72d7b42962597b8459e5fc2e56047f77, type: 3}
@@ -384,6 +384,7 @@ MonoBehaviour:
   maxX: 5
   minY: -9
   maxY: 9
+  size: 5
 --- !u!4 &1493839916
 Transform:
   m_ObjectHideFlags: 0

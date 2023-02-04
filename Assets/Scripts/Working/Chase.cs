@@ -12,7 +12,6 @@ public class Chase : MonoBehaviour
 
     private GameObject prey;
     private GameObject enemy;
-    private float mean;
     private float strength;
     private GameObject[] allPreys;
     private GameObject[] allAllies;
@@ -38,18 +37,19 @@ public class Chase : MonoBehaviour
         allAllies = GameObject.FindGameObjectsWithTag(this.tag);
         allEnemies = GameObject.FindGameObjectsWithTag(enemyTag);
 
-        if (allAllies.Length >= 45) StartCoroutine(ReloadScene());
+        // if any one object won then restart game
+        if (allAllies.Length >= spawn.size * 3) StartCoroutine(ReloadScene());
 
         prey = Closest(allPreys);
 
         strength = (allAllies.Length / 5) * 0.1f;
-        if (allAllies.Length < 15) speed += strength;
+        if (allAllies.Length < spawn.size) speed += strength;
         else speed -= strength;
 
         if (speed < 0.7f) speed = 0.7f;
         else if (speed > 1.7f) speed = 1.7f;
 
-        if (allAllies.Length + allPreys.Length >= 45) speed = 1.7f;
+        if (allAllies.Length + allPreys.Length >= spawn.size * 3) speed = 1.7f;
 
         if (prey.transform.position == transform.position) {
             transform.position = startingPosition + Random.insideUnitCircle * 0.02f;
@@ -77,8 +77,6 @@ public class Chase : MonoBehaviour
                 closest = obj;
             }
         }
-
-        mean = sum / allEnemies.Length;
 
         return closest;
     }

@@ -7,6 +7,7 @@ public class spawn : MonoBehaviour
     public GameObject[] objectPrefab;
     public float minX, maxX;
     public float minY, maxY;
+    static public int size = 15;
 
     void Start() {
         StartCoroutine(ObjectSpawn());
@@ -15,7 +16,7 @@ public class spawn : MonoBehaviour
     IEnumerator ObjectSpawn() {
 
         foreach (GameObject prefab in objectPrefab) {
-            for(int j=0; j<15; j++) {
+            for(int j=0; j<size; j++) {
                 Vector2 pos = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
                 Collider2D collision = Physics2D.OverlapCircle(pos, 1f);
                 while (collision != null) {
