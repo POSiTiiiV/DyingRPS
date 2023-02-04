@@ -18,10 +18,10 @@ public class Collision : MonoBehaviour
         if (collision.gameObject.tag == preyTag) {
             if(gameObject != null) sound.Play();
             Destroy(collision.gameObject);
-            if (Physics2D.OverlapAreaAll(new Vector2(-screenBounds.x, screenBounds.y), new Vector2(screenBounds.x, -screenBounds.y)).Length < spawn.size * 3) {
+            if (Physics2D.OverlapAreaAll(new Vector2(-screenBounds.x, screenBounds.y), new Vector2(screenBounds.x, -screenBounds.y)).Length < Spawn.spawn.size * 3) {
                 GameObject stone = Instantiate(gameObject, collision.transform.position, Quaternion.identity);
             } else {
-                Debug.LogWarning("More than " + spawn.size * 3);
+                Debug.LogWarning("More than " + Spawn.spawn.size * 3);
             }
             
         }

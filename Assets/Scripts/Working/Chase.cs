@@ -38,18 +38,18 @@ public class Chase : MonoBehaviour
         allEnemies = GameObject.FindGameObjectsWithTag(enemyTag);
 
         // if any one object won then restart game
-        if (allAllies.Length >= spawn.size * 3) StartCoroutine(ReloadScene());
+        if (allAllies.Length >= Spawn.spawn.size * 3) StartCoroutine(ReloadScene());
 
         prey = Closest(allPreys);
 
         strength = (allAllies.Length / 5) * 0.1f;
-        if (allAllies.Length < spawn.size) speed += strength;
+        if (allAllies.Length < Spawn.spawn.size) speed += strength;
         else speed -= strength;
 
         if (speed < 0.7f) speed = 0.7f;
         else if (speed > 1.7f) speed = 1.7f;
 
-        if (allAllies.Length + allPreys.Length >= spawn.size * 3) speed = 1.7f;
+        if (allAllies.Length + allPreys.Length >= Spawn.spawn.size * 3) speed = 1.7f;
 
         if (prey.transform.position == transform.position) {
             transform.position = startingPosition + Random.insideUnitCircle * 0.02f;

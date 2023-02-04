@@ -2,14 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spawn : MonoBehaviour
+public class Spawn : MonoBehaviour
 {
+    public static Spawn spawn;
+
     public GameObject[] objectPrefab;
     public float minX, maxX;
     public float minY, maxY;
-    static public int size = 15;
+    public int size = 15;
 
     void Start() {
+        if (spawn != null && spawn != this) Destroy(this);
+        else spawn = this;
+
         StartCoroutine(ObjectSpawn());
     }
 
