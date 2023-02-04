@@ -49,6 +49,8 @@ public class Chase : MonoBehaviour
         if (speed < 0.7f) speed = 0.7f;
         else if (speed > 1.7f) speed = 1.7f;
 
+        if (allAllies.Length + allPreys.Length >= 45) speed = 1.7f;
+
         if (prey.transform.position == transform.position) {
             transform.position = startingPosition + Random.insideUnitCircle * 0.02f;
         } else {
@@ -56,7 +58,7 @@ public class Chase : MonoBehaviour
         }
 
         enemy = Closest(allEnemies);
-        if (enemy.transform.position != transform.position) {
+        if (enemy.transform.position != transform.position && Vector3.Distance(transform.position, enemy.transform.position) < 2f) {
             transform.position = Vector2.MoveTowards(transform.position, enemy.transform.position, -(0.5f) * Time.deltaTime) + Random.insideUnitCircle * 0.02f;
         }
     }
