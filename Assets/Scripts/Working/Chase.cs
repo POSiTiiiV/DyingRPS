@@ -58,7 +58,7 @@ public class Chase : MonoBehaviour
         }
 
         enemy = Closest(allEnemies);
-        if (enemy.transform.position != transform.position && Vector3.Distance(transform.position, enemy.transform.position) < 2f) {
+        if (enemy.transform.position != transform.position && Vector3.Distance(transform.position, enemy.transform.position) < 5f) {
             transform.position = Vector2.MoveTowards(transform.position, enemy.transform.position, -(0.5f) * Time.deltaTime) + Random.insideUnitCircle * 0.02f;
         }
     }
