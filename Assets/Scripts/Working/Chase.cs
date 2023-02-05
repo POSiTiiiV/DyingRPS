@@ -39,8 +39,8 @@ public class Chase : MonoBehaviour
         // if any one object won then restart game
         if (allAllies.Length >= Spawn.spawn.size * 3) StartCoroutine(ReloadScene());
 
+        // run towards prey
         prey = Closest(allPreys);
-
         strength = (allAllies.Length / 5) * 0.1f;
         if (allAllies.Length < Spawn.spawn.size) speed += strength;
         else speed -= strength;
@@ -50,12 +50,10 @@ public class Chase : MonoBehaviour
 
         if (allAllies.Length + allPreys.Length >= Spawn.spawn.size * 3) speed = 1.7f;
 
-        if (prey.transform.position == transform.position) {
-            transform.position = startingPosition + Random.insideUnitCircle * 0.02f;
-        } else {
-            transform.position = Vector2.MoveTowards(transform.position, prey.transform.position, speed * Time.deltaTime) + Random.insideUnitCircle * 0.02f;
-        }
+        if (prey.transform.position == transform.position) transform.position = startingPosition + Random.insideUnitCircle * 0.02f;
+        else transform.position = Vector2.MoveTowards(transform.position, prey.transform.position, speed * Time.deltaTime) + Random.insideUnitCircle * 0.02f;
 
+        // run from enemy when it is close enough
         enemy = Closest(allEnemies);
         if (enemy.transform.position != transform.position && Vector3.Distance(transform.position, enemy.transform.position) < 5f) {
             transform.position = Vector2.MoveTowards(transform.position, enemy.transform.position, -(0.5f) * Time.deltaTime) + Random.insideUnitCircle * 0.02f;
