@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Chase : MonoBehaviour
 {
-    public string preyTag;
-    public string enemyTag;
-    [Range(0f, 1f)]
-    public float speed = 1;
+    [SerializeField] private string preyTag;
+    [SerializeField] private string enemyTag;
+    [Range(0f, 1f)] [SerializeField] private float speed = 1;
 
     private GameObject prey;
     private GameObject enemy;

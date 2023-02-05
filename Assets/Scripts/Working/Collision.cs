@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Collision : MonoBehaviour
 {
-    public AudioSource sound;
-    public string preyTag;
+    [SerializeField] private AudioSource sound;
+    [SerializeField] private string preyTag;
 
     // for boundaries
     private Vector2 screenBounds;

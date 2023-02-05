@@ -125,7 +125,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.58, y: 0.12}
   serializedVersion: 2
-  m_Radius: 4.63
+  m_Radius: 5
 --- !u!114 &795085845267177503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,7 +141,6 @@ MonoBehaviour:
   preyTag: scissors
   enemyTag: paper
   speed: 1
-  atSpawn: {fileID: 0}
 --- !u!114 &6014041801748613660
 MonoBehaviour:
   m_ObjectHideFlags: 0

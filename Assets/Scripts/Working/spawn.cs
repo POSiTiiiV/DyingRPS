@@ -6,9 +6,9 @@ public class Spawn : MonoBehaviour
 {
     public static Spawn spawn;
 
-    public GameObject[] objectPrefab;
-    public float minX, maxX;
-    public float minY, maxY;
+    [SerializeField] private GameObject[] objectPrefab;
+    [SerializeField] private float minX, maxX;
+    [SerializeField] private float minY, maxY;
     public int size = 15;
 
     void Start() {
